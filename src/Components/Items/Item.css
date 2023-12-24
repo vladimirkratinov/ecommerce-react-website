@@ -8,6 +8,11 @@
   display: flex;
   gap: 20px;
 }
+.item img {
+    width: 350px;
+    height: 400px;
+    
+}
 .item-price-new {
   color: #374151;
   font-size: 18px;
