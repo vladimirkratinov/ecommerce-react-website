@@ -12,5 +12,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ## Screenshots 📸
 
 <div align="center">
-   <img src="website-example1.png" alt="Image1" width="800" height="100%">
+   <img src="./public/website-example1.png" alt="Image1" width="800" height="100%">
 </div>
