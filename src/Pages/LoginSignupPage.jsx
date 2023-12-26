@@ -1,5 +1,6 @@
-import React from 'react'
-import { useState } from 'react';
+// Import necessary dependencies
+import React, { useState } from 'react';
+import './CSS/LoginSignup.css'
 
 // Component for Login
 const Login = ({ onLogin }) => {
@@ -17,11 +18,12 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Login</h2>
       <div>
         <label>Username:</label>
         <input
+          className="input-field"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -30,13 +32,16 @@ const Login = ({ onLogin }) => {
       <div>
         <label>Password:</label>
         <input
+          className="input-field"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <div>
-        <button onClick={handleLogin}>Login</button>
+        <button className="action-button" onClick={handleLogin}>
+          Login
+        </button>
       </div>
     </div>
   );
@@ -58,11 +63,12 @@ const Signup = ({ onSignup }) => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Signup</h2>
       <div>
         <label>Username:</label>
         <input
+          className="input-field"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -71,20 +77,23 @@ const Signup = ({ onSignup }) => {
       <div>
         <label>Password:</label>
         <input
+          className="input-field"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <div>
-        <button onClick={handleSignup}>Signup</button>
+        <button className="action-button" onClick={handleSignup}>
+          Signup
+        </button>
       </div>
     </div>
   );
 };
 
 // Parent component for managing login/signup state
-const LoginSignUpPage = () => {
+const LoginSignupPage = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
 
   const handleLogin = (username) => {
@@ -98,14 +107,14 @@ const LoginSignUpPage = () => {
   };
 
   return (
-    <div>
+    <div className="page-container">
       {loggedInUser ? (
-        <div>
+        <div className="welcome-container">
           <h2>Welcome, {loggedInUser}!</h2>
           {/* Display user dashboard or other content */}
         </div>
       ) : (
-        <div>
+        <div className="form-container">
           <Login onLogin={handleLogin} />
           <Signup onSignup={handleSignup} />
         </div>
@@ -114,4 +123,4 @@ const LoginSignUpPage = () => {
   );
 };
 
-export default LoginSignUpPage;
+export default LoginSignupPage;
