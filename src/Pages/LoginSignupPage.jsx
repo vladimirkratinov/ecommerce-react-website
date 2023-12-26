@@ -3,23 +3,19 @@ import React, { useState } from 'react';
 import './CSS/LoginSignup.css'
 
 // Component for Login
-const Login = ({ onLogin }) => {
+const Login = ({ onLogin, loginError }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Perform authentication logic here (e.g., API call, validation)
-    // For simplicity, just checking if both fields are filled
-    if (username && password) {
-      onLogin(username);
-    } else {
-      alert('Please enter both username and password.');
-    }
+  const handleLoginClick = () => {
+    // Pass the username and password to the onLogin handler
+    onLogin(username, password);
   };
 
   return (
     <div className="container">
       <h2>Login</h2>
+      {loginError && <p className="error-message">Invalid username or password.</p>}
       <div>
         <label>Username:</label>
         <input
@@ -39,13 +35,14 @@ const Login = ({ onLogin }) => {
         />
       </div>
       <div>
-        <button className="action-button" onClick={handleLogin}>
+        <button className="action-button" onClick={handleLoginClick}>
           Login
         </button>
       </div>
     </div>
   );
 };
+
 
 // Component for Signup
 const Signup = ({ onSignup }) => {
@@ -95,10 +92,23 @@ const Signup = ({ onSignup }) => {
 // Parent component for managing login/signup state
 const LoginSignupPage = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
+  const [users, setUsers] = useState([
+    // Hardcoded user data for demonstration purposes
+    { username: 'user1', password: 'password1' },
+    { username: 'user2', password: 'password2' },
+  ]);
+  const [loginError, setLoginError] = useState(false);
 
-  const handleLogin = (username) => {
-    // Perform login logic here (e.g., set user in state, navigate to dashboard)
-    setLoggedInUser(username);
+  const handleLogin = (username, password) => {
+    // Simulate authentication by checking hardcoded credentials
+    const user = users.find((u) => u.username === username && u.password === password);
+
+    if (user) {
+      setLoggedInUser(username);
+      setLoginError(false);
+    } else {
+      setLoginError(true);
+    }
   };
 
   const handleSignup = (username) => {
@@ -115,7 +125,7 @@ const LoginSignupPage = () => {
         </div>
       ) : (
         <div className="form-container">
-          <Login onLogin={handleLogin} />
+          <Login onLogin={handleLogin} loginError={loginError} />
           <Signup onSignup={handleSignup} />
         </div>
       )}
