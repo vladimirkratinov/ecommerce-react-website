@@ -1,7 +1,7 @@
 // Cart.jsx
 
 import React from 'react';
-import './Cart.css';
+import './CSS/Cart.css';
 
 const Cart = () => {
   const cartItems = [
