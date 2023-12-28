@@ -19,6 +19,7 @@ const ShopContextProvider = (props) => {
   const addToCart = (itemId) => {
     //provide value for key
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    console.log(cartItems);
   };
 
   const removeFromCart = (itemId) => {
