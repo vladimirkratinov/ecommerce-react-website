@@ -6,6 +6,9 @@ Welcome to the E-commerce-React-Store repository! This project is a dynamic and 
 
 <div align="center">
    <img src="./public/website-example1.png" alt="Image1" width="800" height="100%">
+   <img src="./public/website-example2.png" alt="Image1" width="800" height="100%">
+   <img src="./public/website-example3.png" alt="Image1" width="800" height="100%">
+   <img src="./public/website-example4.png" alt="Image1" width="800" height="100%">
 </div>
 
 ## Key Features
