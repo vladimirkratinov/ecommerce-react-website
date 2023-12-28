@@ -7,7 +7,7 @@ const Item = (props) => {
     <div className="item">
       <Link to={`/product/${props.id}`}>
         {/* Image scroll to the top fix */}
-        <img src={props.image} alt="" />
+        <img onClick={window.scrollTo(0, 0)} src={props.image} alt="" />
       </Link>
 
       <p>{props.name}</p>
