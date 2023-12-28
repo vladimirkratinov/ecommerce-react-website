@@ -5,19 +5,19 @@ Welcome to the E-commerce-React-Store repository! This project is a dynamic and 
 ## Screenshots 📸
 
 <div align="center">
-   1. Main Page
+   <b>1.Main Page</b>
    <img src="./public/website-example1.png" alt="Image1" width="800" height="100%">
    <hr>
 
-   2. Cart Page
+   <b>2.Cart Page</b>
    <img src="./public/website-example2.png" alt="Image1" width="800" height="100%">
    <hr>
 
-   3. Products Page
+   <b>3.Products Page</b>
    <img src="./public/website-example3.png" alt="Image1" width="800" height="100%">
    <hr>
 
-   4. Login/SignUp Page
+   <b>4.Login/SignUp Page</b>
    <img src="./public/website-example4.png" alt="Image1" width="800" height="100%">
    <hr>
 </div>
