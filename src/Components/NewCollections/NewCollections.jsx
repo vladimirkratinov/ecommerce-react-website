@@ -10,10 +10,10 @@ const NewCollections = () => {
         <h1>New Collections</h1>
         <hr />
         <div className="collections">
-          {new_collection.map((item, key) => {
+          {new_collection.map((item, index) => {
             return (
               <Item
-                key={key}
+                key={index}
                 id={item.id}
                 name={item.name}
                 image={item.image}
