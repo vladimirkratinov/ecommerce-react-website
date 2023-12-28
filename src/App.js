@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
