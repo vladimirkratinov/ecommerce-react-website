@@ -4,22 +4,34 @@ Welcome to the E-commerce-React-Store repository! This project is a dynamic and 
 
 ## Screenshots 📸
 
-<div align="center">
-   <b>1.Main Page</b>
+<div>
+   <h1>1.Main Page</h1>
+
+   <div align="center">
    <img src="./public/website-example1.png" alt="Image1" width="800" height="100%">
+   </div>
    <hr>
 
-   <b>2.Cart Page</b>
+   <h1>2.Cart Page</h1>
+
+   <div align="center">
    <img src="./public/website-example2.png" alt="Image1" width="800" height="100%">
    <hr>
+   </div>
 
-   <b>3.Products Page</b>
+   <h1>3.Products Page</h1>
+
+   <div align="center">
    <img src="./public/website-example3.png" alt="Image1" width="800" height="100%">
    <hr>
+   </div>
 
-   <b>4.Login/SignUp Page</b>
+   <h1>4.Login/SignUp Page</h1>
+
+   <div align="center">
    <img src="./public/website-example4.png" alt="Image1" width="800" height="100%">
    <hr>
+   </div>
 </div>
 
 ## Key Features
@@ -52,5 +64,3 @@ To run the project locally, follow these steps:
 Explore the code, experiment with customization, and contribute to the growth of this E-commerce React Store!
 
 Feel free to report issues, contribute enhancements, or suggest new features. Happy coding!
-
-
