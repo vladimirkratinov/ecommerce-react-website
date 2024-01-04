@@ -14,13 +14,13 @@ export default function Navbar() {
     <div className="navbar">
       <div className="nav-logo">
         <img src={logo} alt="" />
-        <p>Toy Factory</p>
+        <p>Shop Name</p>
       </div>
       <ul className="nav-menu">
         <li onClick={()=>{setMenu("shop")}}><Link to="/">Shop</Link> {menu === "shop" ? <hr/> : <></>}</li>
-        <li onClick={()=>{setMenu("men")}}><Link to="men">Men</Link> {menu === "men" ? <hr/> : <></>}</li>
+        <li onClick={()=>{setMenu("decor")}}><Link to="decor">Home Decor</Link> {menu === "decor" ? <hr/> : <></>}</li>
         <li onClick={()=>{setMenu("plushies")}}><Link to="plushies">Plushies</Link> {menu === "plushies" ? <hr/> : <></>}</li>
-        <li onClick={()=>{setMenu("kids")}}><Link to="kids">Kids</Link> {menu === "kids" ? <hr/> : <></>}</li>
+        <li onClick={()=>{setMenu("garden")}}><Link to="garden">Garden</Link> {menu === "garden" ? <hr/> : <></>}</li>
       </ul>
       <div className="nav-login-cart">
         <Link to="/login"><button>Login</button></Link>
